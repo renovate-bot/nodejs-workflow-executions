@@ -1,4 +1,4 @@
-# Node.js Client for Cloud Workflows API
+# Node.js Client for Cloud Workflows Executions API
 
 Google cloud workflows executions API.
 
