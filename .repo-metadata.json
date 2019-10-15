@@ -1,0 +1,13 @@
+{
+  "name": "workflow-executions",
+  "name_pretty": "Workflow Executions",
+  "product_documentation": "https://cloud.google.com/workflow-exeuctions/docs/",
+  "client_documentation": "https://googleapis.dev/nodejs/workflow-executions/latest/index.html",
+  "issue_tracker": "",
+  "release_level": "alpha",
+  "language": "nodejs",
+  "repo": "googleapis/nodejs-workflow-executions",
+  "distribution_name": "@google-cloud/workflow-executions",
+  "api_id": "workflowexecutions.googleapis.com",
+  "requires_billing": true
+}
