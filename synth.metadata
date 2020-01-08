@@ -1,31 +1,297 @@
 {
-  "updateTime": "2019-10-09T23:07:56.094401Z",
+  "updateTime": "2020-01-04T00:36:46.581946Z",
   "sources": [
     {
-      "generator": {
-        "name": "artman",
-        "version": "0.38.0",
-        "dockerImage": "googleapis/artman@sha256:0d2f8d429110aeb8d82df6550ef4ede59d40df9062d260a1580fce688b0512bf"
+      "git": {
+        "name": "googleapis-private",
+        "remote": "https://github.com/googleapis/googleapis-private.git",
+        "sha": "c7bc200d62915541e1fd3c3ff6345f92269a3251",
+        "internalRef": "288042994"
       }
     },
     {
       "template": {
         "name": "node_library",
         "origin": "synthtool.gcp",
-        "version": "2019.5.2"
+        "version": "2019.10.17"
       }
     }
   ],
   "destinations": [
     {
       "client": {
-        "source": "googleapis",
+        "source": "googleapis-private",
         "apiName": "workflow-executions",
         "apiVersion": "v1alpha1",
-        "language": "nodejs",
-        "generator": "gapic",
-        "config": "google/cloud/workflows/executions/artman_workflowexecutions_v1alpha1.yaml"
+        "language": "typescript",
+        "generator": "gapic-generator-typescript"
       }
+    }
+  ],
+  "newFiles": [
+    {
+      "path": "CONTRIBUTING.md"
+    },
+    {
+      "path": ".prettierignore"
+    },
+    {
+      "path": ".eslintignore"
+    },
+    {
+      "path": "tslint.json"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md"
+    },
+    {
+      "path": "codecov.yaml"
+    },
+    {
+      "path": "webpack.config.js"
+    },
+    {
+      "path": ".nycrc"
+    },
+    {
+      "path": "linkinator.config.json"
+    },
+    {
+      "path": "LICENSE"
+    },
+    {
+      "path": ".eslintrc.yml"
+    },
+    {
+      "path": "renovate.json"
+    },
+    {
+      "path": ".jsdoc.js"
+    },
+    {
+      "path": "tsconfig.json"
+    },
+    {
+      "path": ".prettierrc"
+    },
+    {
+      "path": "README.md"
+    },
+    {
+      "path": "test/gapic-executions-v1alpha1.ts"
+    },
+    {
+      "path": "protos/protos.json"
+    },
+    {
+      "path": "protos/protos.js"
+    },
+    {
+      "path": "protos/protos.d.ts"
+    },
+    {
+      "path": "protos/google/cloud/workflows/executions/v1alpha1/executions.proto"
+    },
+    {
+      "path": "system-test/install.ts"
+    },
+    {
+      "path": "system-test/fixtures/sample/src/index.js"
+    },
+    {
+      "path": "system-test/fixtures/sample/src/index.ts"
+    },
+    {
+      "path": ".kokoro/test.sh"
+    },
+    {
+      "path": ".kokoro/system-test.sh"
+    },
+    {
+      "path": ".kokoro/trampoline.sh"
+    },
+    {
+      "path": ".kokoro/publish.sh"
+    },
+    {
+      "path": ".kokoro/test.bat"
+    },
+    {
+      "path": ".kokoro/lint.sh"
+    },
+    {
+      "path": ".kokoro/common.cfg"
+    },
+    {
+      "path": ".kokoro/docs.sh"
+    },
+    {
+      "path": ".kokoro/samples-test.sh"
+    },
+    {
+      "path": ".kokoro/continuous/node8/test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node8/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/system-test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/lint.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/docs.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/samples-test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node12/test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node12/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node8/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node8/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/system-test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/lint.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/docs.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/samples-test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/windows/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/windows/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node12/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node12/common.cfg"
+    },
+    {
+      "path": ".kokoro/release/publish.cfg"
+    },
+    {
+      "path": ".kokoro/release/docs.cfg"
+    },
+    {
+      "path": ".kokoro/release/docs.sh"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md"
+    },
+    {
+      "path": ".github/release-please.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/support_request.md"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md"
+    },
+    {
+      "path": "build/test/gapic-executions-v1alpha1.js.map"
+    },
+    {
+      "path": "build/test/gapic-executions-v1alpha1.js"
+    },
+    {
+      "path": "build/test/gapic-executions-v1alpha1.d.ts"
+    },
+    {
+      "path": "build/protos/protos.json"
+    },
+    {
+      "path": "build/protos/protos.js"
+    },
+    {
+      "path": "build/protos/protos.d.ts"
+    },
+    {
+      "path": "build/protos/google/cloud/workflows/executions/v1alpha1/executions.proto"
+    },
+    {
+      "path": "build/system-test/install.d.ts"
+    },
+    {
+      "path": "build/system-test/install.js.map"
+    },
+    {
+      "path": "build/system-test/install.js"
+    },
+    {
+      "path": "build/src/index.js"
+    },
+    {
+      "path": "build/src/index.js.map"
+    },
+    {
+      "path": "build/src/index.d.ts"
+    },
+    {
+      "path": "build/src/v1alpha1/executions_client_config.json"
+    },
+    {
+      "path": "build/src/v1alpha1/index.js"
+    },
+    {
+      "path": "build/src/v1alpha1/executions_client.js.map"
+    },
+    {
+      "path": "build/src/v1alpha1/executions_client.d.ts"
+    },
+    {
+      "path": "build/src/v1alpha1/executions_client.js"
+    },
+    {
+      "path": "build/src/v1alpha1/index.js.map"
+    },
+    {
+      "path": "build/src/v1alpha1/index.d.ts"
+    },
+    {
+      "path": "src/index.ts"
+    },
+    {
+      "path": "src/v1alpha1/executions_client_config.json"
+    },
+    {
+      "path": "src/v1alpha1/executions_proto_list.json"
+    },
+    {
+      "path": "src/v1alpha1/index.ts"
+    },
+    {
+      "path": "src/v1alpha1/executions_client.ts"
     }
   ]
 }

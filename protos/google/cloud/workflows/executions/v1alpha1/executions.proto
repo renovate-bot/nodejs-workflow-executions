@@ -70,7 +70,10 @@ message ListExecutionsRequest {
   // Required. Name of the workflow from which the executions should be listed,
   // for example, "projects/project1/locations/us-central1/workflows/workflow1".
   string parent = 1 [
-    (google.api.field_behavior) = REQUIRED
+    (google.api.field_behavior) = REQUIRED,
+    (google.api.resource_reference) = {
+      type: "workflows.googleapis.com/Workflow"
+    }
   ];
 
   // Maximum number of workflow executions to return per call.
@@ -91,7 +94,10 @@ message CreateExecutionRequest {
   // Required. Name of the workflow for which an execution should be created,
   // for example, "projects/project1/locations/us-central1/workflows/workflow1".
   string parent = 1 [
-    (google.api.field_behavior) = REQUIRED
+    (google.api.field_behavior) = REQUIRED,
+    (google.api.resource_reference) = {
+      type: "workflows.googleapis.com/Workflow"
+    }
   ];
 
   // Required. Execution to be created.
@@ -103,7 +109,10 @@ message CancelExecutionRequest {
   // Required. Name of the workflow execution which should be cancelled.
   // "projects/project1/locations/us-central1/workflows/workflow1/executions/execution1"
   string name = 1 [
-    (google.api.field_behavior) = REQUIRED
+    (google.api.field_behavior) = REQUIRED,
+    (google.api.resource_reference) = {
+      type: "workflowexecutions.googleapis.com/Execution"
+    }
   ];
 }
 
@@ -113,7 +122,10 @@ message GetExecutionRequest {
   // retrieved, for example,
   // "projects/project1/locations/us-central1/workflows/workflow1/executions/execution1"
   string name = 1 [
-    (google.api.field_behavior) = REQUIRED
+    (google.api.field_behavior) = REQUIRED,
+    (google.api.resource_reference) = {
+      type: "workflowexecutions.googleapis.com/Execution"
+    }
   ];
 }
 
@@ -131,6 +143,11 @@ message ListExecutionsResponse {
 
 // A running instance of Cloud Workflow.
 message Execution {
+  option (google.api.resource) = {
+    type: "workflowexecutions.googleapis.com/Execution"
+    pattern: "projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}"
+  };
+
   // Describes the current state of the execution.
   enum State {
     // Invalid state.

@@ -20,15 +20,20 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-# run the gapic generator
-gapic = gcp.GAPICGenerator()
+# run the microgenerator:
+gapic = gcp.GAPICMicrogenerator()
 versions = ['v1alpha1']
 for version in versions:
-  library = gapic.node_library(
+  library = gapic.typescript_library(
     'workflow-executions',
-    config_path='/google/cloud/workflows/executions/artman_workflowexecutions_v1alpha1.yaml',
-    version=version)
-  s.copy(library, excludes=[])
+    version=version,
+    private=True,
+    generator_args={
+      'package-name': '@google-cloud/workflow-executions'
+    },
+    proto_path='/google/cloud/workflows/executions/v1alpha1')
+
+s.copy(library, excludes=['README.md', 'package.json'])
 
 # Copy common templates
 common_templates = gcp.CommonTemplates()
@@ -38,3 +43,4 @@ s.copy(templates)
 # Node.js specific cleanup
 subprocess.run(['npm', 'install'])
 subprocess.run(['npm', 'run', 'fix'])
+subprocess.run(['npx', 'compileProtos', 'src'])
