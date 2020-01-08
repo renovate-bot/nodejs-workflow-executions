@@ -1,12 +1,11 @@
 {
   "repository": "googleapis/nodejs-workflow-executions",
   "name": "@google-cloud/workflow-executions",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "author": "Google LLC",
   "description": "Workflow Executions API client for Node.js",
   "main": "build/src/index.js",
   "browser": "src/browser.js",
-  "author": "Google LLC",
   "files": [
     "build/src",
     "build/protos"
